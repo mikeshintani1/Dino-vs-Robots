@@ -31,3 +31,27 @@ class Dino:
         else:
             print('Dino looking at butterflies!! ')
             pass
+
+class House:
+    def __init__(self, owner, square_feet) -> None:
+        self.owner = owner
+        self.square_feet = square_feet
+
+
+class Neighborhood:
+    def __init__(self) -> None:
+        self.houses = [House("JJ", 400000), House("Susan", 600000)]
+
+
+# birnam_wood = Neighborhood()
+
+# # GOAL: Get the owner value for the first house in the Neighborhood
+
+# # print(birnam_wood.houses[0].owner)
+
+# for house in birnam_wood.houses:
+#     print(house.owner)
+
+# dino_fleet = Dino()
+# for dino in dino_fleet.name:
+#     print(dino)
