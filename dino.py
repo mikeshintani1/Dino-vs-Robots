@@ -22,7 +22,6 @@ class Dino:
             pass
 
     def attack(self, robot):
-        self.dino_charged()
         if self.dino_charged:
             self.dino_charged = self.robot_health - 3
             print(f'{self.name} bites off a big chunk of {robot.name}!! ')

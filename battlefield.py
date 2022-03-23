@@ -1,5 +1,6 @@
 
 
+from unicodedata import name
 from herd import Herd
 from fleet import Fleet
 
@@ -38,36 +39,39 @@ class Battlefield:
                
     def dino_turn(self):
             attack = input("Press Y to launch attack!:  ")
-            fleet = Fleet.create_fleet
-
+            # print(f"The dino herd has assembled! {Herd.dino.dino_one.name} ({Herd.dino.dino_one.health} HP), {Herd.dino.dino_two.name} ({Herd.dino.dino_two.health} HP), and {Herd.dino.dino_three.name} ({Herd.dino.dino_three.health} HP.)")
             select_target = input("Enter choice to attack! <1> for 'Nokia' <2> for 'Samsung' <3> for 'Asus' ")
+            for dino in self.herd.dinos:
+                print(dino.name)
             if select_target == "1":
-                fleet = Fleet[0]
+                print(f"{self.herd.dinos[1]} has been attacked! ")
             elif select_target == "2":
-                fleet = Fleet.create_fleet[1]
+                print(f"{self.herd.dinos} has been attacked! ")
             elif select_target == "3":
-                fleet = Fleet.create_fleet[2]
-
-            
-                print(f'{self.dino.name} attacked {self.robot.name} for {self.attack_power}! ')
-            
+                print(f"{self.herd.dinos} has been attacked! ")
+            pass
 
 
     def robo_turn(self):
-            attack = input("Press Y to launch attack!:  ")
-            herd = Herd.create_herd
+        for robot in self.fleet.robot:
+                print(robot.list)
 
-            select_target = input("Enter choice to attack! <1> for 'T-Rex' <2> for 'Raptor' <3> for 'Aligator' ")
-            if select_target == "1":
-                herd = Herd.create_herd[0]
-                return self.battle
-            elif select_target == "2":
-                herd = Herd.create_herd[1]
-            elif select_target == "3":
-                herd = Herd.create_herd[2]
+                # attack = input("Press Y to launch attack!:  ")
+                # herd = Herd.create_herd
+
+                # select_target = input("Enter choice to attack! <1> for 'T-Rex' <2> for 'Raptor' <3> for 'Aligator' ")
+                # if select_target == "1":
+                #  herd = Herd.create_herd[0]
+                # elif select_target == "2":
+                #     herd = Herd.create_herd[1]
+                # elif select_target == "3":
+                #     herd = Herd.create_herd[2]
+                pass
 
 
     def show_robo_opponent_options(self):
+        # for dino in self.herd.dino_list:
+        #         print(dino.name)
         pass
 
 

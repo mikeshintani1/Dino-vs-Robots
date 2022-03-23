@@ -4,9 +4,9 @@ from weapon import Weapon
 
 
 class Robot:
-    def __init__(self, name, int):
+    def __init__(self, name):
         self.name = name
-        self.health = int
+        self.health = 12
         self.weapon = Weapon('Ray-gun')
         
 
